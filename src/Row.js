@@ -31,7 +31,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
     const movietrailername = isLargeRow
       ? movie.target.alt + " Official Trailer Netflix"
       : movie.target.alt + " Official Trailer"
-    const youtubeUrl = `search?part=snippet&q=${movietrailername}&&type=video&key=AIzaSyCMWzYuuAiPFhynNPZ4qTAwCGSRajmAHhc`
+    const youtubeUrl = `search?part=snippet&q=${movietrailername}&&type=video&key=Your_Youtube_Api_Key`
 
     const response = await YoutubeApi.get(youtubeUrl)
 
