@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react"
-import "./Nav.css"
+import React, { useState, useEffect } from "react";
+import "../Css/Nav.css";
 
 function Nav() {
-  const [showHandler, setShowHandler] = useState(false)
+  const [showHandler, setShowHandler] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) setShowHandler(true)
-      else setShowHandler(false)
-    })
+      if (window.scrollY > 100) setShowHandler(true);
+      else setShowHandler(false);
+    });
     return () => {
-      window.removeEventListener("scroll")
-    }
-  }, [])
+      window.removeEventListener("scroll");
+    };
+  }, []);
 
   return (
     <div className={`nav ${showHandler && "nav__black"}`}>
@@ -27,7 +27,7 @@ function Nav() {
         alt="avatar logo"
       />
     </div>
-  )
+  );
 }
 
-export default Nav
+export default Nav;
