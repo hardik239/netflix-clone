@@ -33,14 +33,10 @@ function Row({ title, fetchUrl, isLargeRow, rowNo }) {
   const handleClick = async (movie) => {
     const movietrailername = isLargeRow
       ? movie.target.alt + " Official Trailer Netflix"
-<<<<<<< HEAD:src/Components/Row.js
       : movie.target.alt + " Official Trailer";
-    const youtubeUrl = `search?part=snippet&q=${movietrailername}&&type=video&key=AIzaSyCMWzYuuAiPFhynNPZ4qTAwCGSRajmAHhc`;
-=======
-      : movie.target.alt + " Official Trailer"
+   
     const youtubeUrl = `search?part=snippet&q=${movietrailername}&&type=video&key=Your_Youtube_Api_Key`
->>>>>>> fb4951c5242a8dba7e1708e03b57c9e851dc23d3:src/Row.js
-
+    
     const response = await YoutubeApi.get(youtubeUrl);
 
     setTrailerUrl((prev) =>
